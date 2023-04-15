@@ -1,0 +1,185 @@
+.vacancy{
+  padding: 25px 0 30px 0;
+  @media screen and (max-width: 767px){ // for mobile phone
+    padding: 30px 0 50px 0;
+  }
+}
+.list-vacancy{
+  &__item{
+    padding: 30px 30px 35px 45px;
+    background: #FFFFFF;
+    border: 1px solid #F2EFF5;
+    border-radius: 35.5px;
+    margin-bottom: 15px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      padding: 30px 15px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+    }
+  }
+  &__top-item{
+    display: flex;
+    flex-direction: column;
+  }
+  &__sub{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(91, 69, 122, 0.5);
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  &__name{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #3B3D78;
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+  }
+  &__adress{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: #3B3D78;
+    margin-left: auto;
+    margin-right: 70px;
+    @media screen and (max-width: 1200px){
+      margin: 0;
+    }
+    @media screen and (max-width: 991px){ // for tablet
+      display: none;
+    }
+  }
+  &__age{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: #3B3D78;
+    margin-right: 150px;
+    @media screen and (max-width: 1200px){
+      margin: 0;
+    }
+    @media screen and (max-width: 991px){ // for tablet
+      display: none;
+    }
+  }
+  &__price{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: #3B3D78;
+    margin-right: 165px;
+    @media screen and (max-width: 1200px){
+      margin: 0;
+    }
+    @media screen and (max-width: 991px){ // for tablet
+      display: none;
+    }
+  }
+  &__top{
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1200px){
+      justify-content: space-between;
+    }
+    .arrow{
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      z-index: 1;
+      transition: .2s;
+    }
+    &.active{
+      .arrow{
+        transform: rotateZ(45deg);
+      }
+      .list-vacancy__adress,
+      .list-vacancy__age,
+      .list-vacancy__price{
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+.body-list-vacancy{
+  display: none;
+  background: #FFFFFF;
+  padding: 30px 0 0 0;
+  margin-top: 25px;
+  border-top: 1px solid rgba(59, 61, 120, 0.2);
+  @media screen and (max-width: 991px){ // for tablet
+    padding: 20px 0 0 0;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 767px){ // for mobile phone
+    padding: 15px 0 0 0;
+    margin-top: 15px;
+  }
+  &__bottom-item{
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 991px){ // for tablet
+      margin-top: 20px;
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #3B3D78;
+    margin-bottom: 10px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 16px;
+    }
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(59, 61, 120, 0.6);
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 13px;
+      line-height: 20px;
+    }
+    br{
+      @media screen and (max-width: 991px){ // for tablet
+        display: none;
+      }
+    }
+  }
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(59, 61, 120, 0.2);
+    margin-top: 40px;
+    padding-top: 30px;
+    @media screen and (max-width: 991px){ // for tablet
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 20px;
+      padding-top: 0px;
+    }
+  }
+  &__btn{
+    width: 160px;
+    height: 50px;
+    @media screen and (max-width: 991px){ // for tablet
+      margin-top: 20px;
+    }
+  }
+}

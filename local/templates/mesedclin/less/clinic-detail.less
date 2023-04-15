@@ -1,0 +1,707 @@
+.clinic-card{
+  position: relative;
+  padding: 65px 0 25px 0;
+  @media screen and (max-width: 767px){ // for mobile phone
+    padding: 25px 0 50px 0;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/clinic-bg.png");
+    @media screen and (max-width: 991px){ // for tablet
+      transform: rotate(180deg);
+    }
+  }
+  .breadcrumbs{
+    margin-bottom: 25px;
+  }
+}
+.slider-clinic-card{
+  .owl-nav{
+    margin: 0;
+    width: 100%;
+    button{
+      position: absolute;
+      top: 220px;
+      width: 64px;
+      height: 64px;
+      background: rgba(59, 61, 120, 0.34) !important;
+      border-radius: 50% !important;
+      margin: 0 !important;
+      outline: none;
+      @media screen and (max-width: 1200px){
+        top: 140px;
+        width: 45px;
+        height: 45px;
+      }
+      @media screen and (max-width: 767px){ // for mobile phone
+        top: 120px;
+      }
+    }
+    .owl-prev{
+      left: 50px;
+      @media screen and (max-width: 1200px){
+        left: 30px;
+      }
+      @media screen and (max-width: 767px){ // for mobile phone
+        left: 20px;
+      }
+    }
+    .owl-next{
+      right: 105px;
+      @media screen and (max-width: 1200px){
+        right: 30px;
+      }
+      @media screen and (max-width: 767px){ // for mobile phone
+        right: 20px;
+      }
+    }
+  }
+}
+.item-slider-clinic{
+  &__image{
+    position: relative;
+    border-radius: 32px;
+    height: 485px;
+    width: 100%;
+    padding-right: 55px;
+    @media screen and (max-width: 1200px){
+      padding-right: 0;
+      height: 320px;
+    }
+    @media screen and (max-width: 991px){ // for tablet
+      margin-bottom: 25px;
+    }
+    @media screen and (max-width: 767px){ // for mobile phone
+      height: 265px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(~'100% - 55px');
+      height: 100%;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      opacity: 0.24;
+      border-radius: 32px;
+      @media screen and (max-width: 1200px){
+        width: 100%;
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+}
+.main-clinic-card{
+  //&__image{
+  //  position: relative;
+  //  border-radius: 32px;
+  //  height: 485px;
+  //  width: 100%;
+  //  padding-right: 55px;
+  //  @media screen and (max-width: 1200px){
+  //    padding-right: 0;
+  //    height: 320px;
+  //  }
+  //  @media screen and (max-width: 991px){ // for tablet
+  //    margin-bottom: 25px;
+  //  }
+  //  @media screen and (max-width: 767px){ // for mobile phone
+  //    height: 265px;
+  //  }
+  //  &::before{
+  //    content: '';
+  //    position: absolute;
+  //    top: 0;
+  //    left: 0;
+  //    width: calc(~'100% - 55px');
+  //    height: 100%;
+  //    background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  //    opacity: 0.24;
+  //    border-radius: 32px;
+  //    @media screen and (max-width: 1200px){
+  //      width: 100%;
+  //    }
+  //  }
+  //  img{
+  //    width: 100%;
+  //    height: 100%;
+  //    object-fit: cover;
+  //    border-radius: 32px;
+  //  }
+  //}
+  &__info{
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1200px){
+      padding-left: 30px;
+    }
+    @media screen and (max-width: 991px){ // for tablet
+      padding-left: 15px;
+    }
+  }
+  &__param{
+    display: flex;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(59, 61, 120, 0.2);
+    @media screen and (max-width: 767px){ // for mobile phone
+      flex-wrap: wrap;
+      padding-bottom: 5px;
+    }
+    .main-clinic-card__group{
+      @media screen and (max-width: 767px){ // for mobile phone
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__worktime{
+    display: flex;
+    border-bottom: 1px solid rgba(59, 61, 120, 0.2);
+    padding: 35px 0 45px 0;
+    @media screen and (max-width: 1200px){
+      flex-wrap: wrap;
+      padding: 25px 0 5px 0;
+    }
+    .main-clinic-card__group{
+      @media screen and (max-width: 1200px){
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 41.925px;
+    line-height: 40px;
+    color: #3B3D78;
+    margin-bottom: 17px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+  }
+  &__subtitle{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: #3B3D78;
+    margin-bottom: 30px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      margin-bottom: 25px;
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+  &__group{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    &:last-child{
+      margin-right: 0;
+    }
+    @media screen and (max-width: 1250px){ // for tablet
+      margin-right: 35px;
+    }
+  }
+  &__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 17px;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3px;
+    p{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      color: #3B3D78;
+    }
+  }
+  &__sub{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(59, 61, 120, 0.5);
+  }
+  &__phone{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: #3B3D78;
+    text-decoration: none;
+    &:hover{
+      color: #5B457A;
+    }
+  }
+  &__actions{
+    margin-top: 85px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1200px){
+      margin-top: 45px;
+    }
+    @media screen and (max-width: 991px){ // for tablet
+      margin-top: 25px;
+    }
+  }
+  &__btn{
+    width: 130px;
+    height: 50px;
+    &:hover{
+      background: transparent !important;
+    }
+  }
+  &__social{
+    list-style: none;
+    display: flex;
+    margin: 0 0 0 19px !important;
+    padding: 0;
+    li{
+      padding: 0 16px;
+    }
+  }
+}
+.clinic-about{
+  padding: 105px 0 90px 0;
+  overflow: hidden;
+  @media screen and (max-width: 991px){ // for tablet
+    padding: 20px 0 60px 0;
+  }
+  @media screen and (max-width: 767px){ // for mobile phone
+    padding: 0px 0 60px 0;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    @media screen and (max-width: 991px){ // for tablet
+      margin-bottom: 85px;
+    }
+    @media screen and (max-width: 767px){ // for mobile phone
+      margin-bottom: 50px;
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+    color: #3B3D78;
+    margin-bottom: 20px;
+  }
+  &__text{
+    height: 145px;
+    overflow: hidden;
+    @media screen and (max-width: 991px){ // for tablet
+      height: 100px;
+    }
+    @media screen and (max-width: 767px){ // for mobile phone
+      height: 150px;
+    }
+    p{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    &.active{
+      height: auto;
+    }
+  }
+  &__more{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #3B3D78;
+    margin-top: 15px;
+    cursor: pointer;
+    width: max-content;
+    &:hover{
+      color: #5B457A;
+      text-decoration: none;
+    }
+  }
+}
+.doctor-clinic-about{
+  position: relative;
+  background: #F2EFF5;
+  border-radius: 13px 0 0 13px;
+  padding: 40px 0 30px 40px;
+  @media screen and (max-width: 767px){ // for mobile phone
+    padding: 25px 200px 100px 25px;
+    border-radius: 13px;
+  }
+  @media screen and (max-width: 375.9px){ // for mobile phone
+    padding: 25px 25px 200px 25px;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1000%;
+    background: #F2EFF5;
+    border-radius: 13px 0 0 13px;
+    z-index: -1;
+    @media screen and (max-width: 767px){ // for mobile phone
+      display: none;
+    }
+  }
+  img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 275px;
+    height: 360px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      width: 185px;
+      height: 240px;
+      right: 15px;
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 57px;
+    color: #3B3D78;
+    margin-bottom: 35px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+  span{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(59, 61, 120, 0.5);
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+  p{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #3B3D78;
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  &__btn{
+    width: 120px;
+    height: 50px;
+    margin-top: 15px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      width: 115px;
+      height: 35px;
+    }
+    &:hover{
+      background: transparent !important;
+    }
+  }
+}
+.clinic-specialists{
+  padding: 0 0 75px 0;
+  @media screen and (max-width: 767px){ // for tablet
+    padding: 0 0 50px 0;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 57px;
+    color: #3B3D78;
+    margin-bottom: 20px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+.slider-clinic-specialists{
+  .owl-nav{
+    margin: 0;
+    width: max-content;
+    position: absolute;
+    top: -70px;
+    right: 0px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      right: inherit;
+      top: inherit;
+      position: relative;
+      margin-top: 20px;
+      width: auto;
+    }
+    button{
+      width: 50px;
+      height: 50px;
+      background: rgba(247, 249, 253, 0.4) !important;
+      border-radius: 50% !important;
+      margin: 0 8px !important;
+      outline: none;
+    }
+    .owl-next{
+      margin-right: 0 !important;
+      @media screen and (max-width: 767px){ // for mobile phone
+        margin-right: 8px !important;
+      }
+    }
+  }
+}
+.item-slider-specialists{
+  border: 1px solid #F2EFF5;
+  border-radius: 13px;
+  padding: 8px;
+  &__image{
+    display: flex;
+    height: 250px;
+    width: 100%;
+    border-radius: 13px;
+    margin-bottom: 15px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 13px;
+    }
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: #3B3D78;
+    margin-left: 7px;
+    text-decoration: none !important;
+    &:hover {
+      color: #5b457a;
+    }
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 16px;
+    }
+  }
+  &__text{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 42px;
+    color: rgba(59, 61, 120, 0.5);
+    margin-left: 7px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 25px;
+    }
+  }
+  &__group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: 7px;
+  }
+  &__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-right: 14px;
+  }
+  &__items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 3px;
+    p{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      color: rgba(59, 61, 120, 0.5);
+    }
+    span{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 20px;
+      color: #3B3D78;
+    }
+  }
+  &__phone{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    color: #3B3D78;
+    text-decoration: none;
+    &:hover{
+      color: #5B457A;
+    }
+  }
+}
+.clinic-position{
+  padding: 0 0 70px 0;
+  &__choice{
+    .nav-tabs{
+      border: none;
+      display: flex;
+      margin-bottom: 30px;
+      @media screen and (max-width: 767px){ // for tablet
+        margin-bottom: 20px;
+      }
+      .nav-item{
+        margin-right: 70px;
+        @media screen and (max-width: 991px){ // for tablet
+          margin-right: 25px;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      .nav-link{
+        border: none;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 57px;
+        color: rgba(59, 61, 120, 0.2);
+        @media screen and (max-width: 991px){ // for tablet
+          font-size: 32px;
+          line-height: 38px;
+        }
+        @media screen and (max-width: 767px){ // for tablet
+          font-size: 24px;
+        }
+        &.active{
+          color: #3B3D78;
+        }
+      }
+    }
+    p{
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #3B3D78;
+      margin-bottom: 40px;
+      @media screen and (max-width: 767px){ // for tablet
+        font-size: 13px;
+      }
+      br{
+        @media screen and (max-width: 767px){ // for tablet
+          display: none;
+        }
+      }
+    }
+  }
+  &__tab{
+    .tab-pane.active{
+      display: flex;
+      @media screen and (max-width: 767px){ // for mobile phone
+        flex-wrap: wrap;
+      }
+    }
+    #map, #map2{
+      width: 80%;
+      height: 430px;
+      border-radius: 32px;
+      margin-right: 20px;
+      @media screen and (max-width: 767px){ // for mobile phone
+        height: 360px;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 35px;
+      }
+      @media screen and (max-width: 375.9px){ // for mobile phone
+        height: 260px;
+      }
+      ymaps{
+        border-radius: 32px;
+      }
+    }
+  }
+  &__video{
+    position: relative;
+    width: 20%;
+    min-width: 265px;
+    height: 430px;
+    @media screen and (max-width: 767px){ // for mobile phone
+      height: 305px;
+      width: 100%;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      opacity: 0.24;
+      border-radius: 32px;
+      @media screen and (max-width: 1200px){
+        width: 100%;
+      }
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 32px;
+    }
+  }
+  &__video-item{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 15px 30px;
+    span{
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    .play{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #FFFFFF;
+    }
+  }
+}
