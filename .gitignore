@@ -54,3 +54,8 @@ Thumbs.db
 *.gz
 *.html
 .htaccess
+*.png
+*.svg
+*.jpg
+*.jpeg
+*.gif
